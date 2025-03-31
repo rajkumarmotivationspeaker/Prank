@@ -1,72 +1,74 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html><html>
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-      drop
-    </title>
+    <title>drop</title>
     <style>
-    body{
-      padding: 0;
-      margin: 0;
-    }
-     button{
-       width:90%;
-       height: 70px;
-       background-color: yellow;
-       position: relative;
-       border-radius: 50px;
-       margin:18px ;
-       margin-top: 450px;
-       font-size: 35px;
-       font-weight:bold ;
-     }
-      nav{
+      body {
+        padding: 0;
+        margin: 0;
+        text-align: center;
+      }
+      button {
+        width: 90%;
+        height: 70px;
+        background-color: yellow;
+        position: relative;
+        border-radius: 50px;
+        margin: 18px;
+        margin-top: 450px;
+        font-size: 35px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      nav {
         width: 320px;
         height: 340px;
         background-image: url('p1.jpg');
-       background-size: 100% 100% ;
+        background-size: 100% 100%;
         position: absolute;
-        top:-380px;
+        top: -380px;
         left: 0;
-        display:none;
+        display: none;
         box-sizing: border-box;
         border-top-width: 2px;
         border-color: black;
         border-style: solid;
         border-radius: 400px;
       }
-      
-     button:hover nav{
-      display: block;
-      
-     }
-     
-     button:hover {
-       background-color: red;
-       transition: 0.5s;
-       color: white;
-     }
-     
-     p{
-       text-align: center;
-       margin-top:60px;
-       font-size: 10px;
-       font-weight: bold;
-     }
-  
+      button:hover nav {
+        display: block;
+      }
+      button:hover {
+        background-color: red;
+        transition: 0.5s;
+        color: white;
+      }
+      #message {
+        display: none;
+        font-size: 30px;
+        font-weight: bold;
+        color: red;
+        margin-top: 20px;
+      }
     </style>
   </head>
   <body>
-    
-    
-    
     <div>
-      
-      <button>Click Here <nav></nav></button>
-    
-  </div>
-    <!-- <p>Devloped By:- Raj Kumar</p> -->
+      <button onclick="playMusic(); showMessage();">Click Here <nav></nav></button>
+      <div id="message">Happy April Fool's Day! 🎉😆</div>
+    </div>
+    <audio id="music" src="pank.mp3"></audio><script>
+  function playMusic() {
+    var music = document.getElementById("music");
+    music.play();
+  }
+  
+  function showMessage() {
+    var message = document.getElementById("message");
+    message.style.display = "block";
+  }
+</script>
+
   </body>
 </html>
